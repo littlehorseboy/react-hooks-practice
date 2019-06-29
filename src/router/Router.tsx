@@ -3,9 +3,17 @@ import { CSSTransition } from 'react-transition-group';
 import { HashRouter, Route } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Home from '../pages/Home/Home';
+import HelloWorld from '../components/1-hello-world/HelloWorld';
+import HelloName from '../components/2-introducing-jsx/HelloName';
+import FormatName from '../components/2-introducing-jsx/FormatName';
+import Tick from '../components/3-rendering-elements/Tick';
 
 const routes = [
   { path: '/', Component: Home },
+  { path: '/HelloWorld', Component: HelloWorld },
+  { path: '/HelloName', Component: HelloName },
+  { path: '/FormatName', Component: FormatName },
+  { path: '/Tick', Component: Tick },
 ];
 
 const useStyles = makeStyles({
@@ -13,7 +21,7 @@ const useStyles = makeStyles({
     fontFamily: 'system-ui, -apple-system, "Roboto", "Helvetica", "Arial", sans-serif',
     transition: 'opacity 250ms ease-in',
     '&-enter': {
-      opacity: 0.3,
+      opacity: 0.1,
     },
     '&-enter-done': {
       opacity: 1,
@@ -22,7 +30,7 @@ const useStyles = makeStyles({
       opacity: 1,
     },
     '&-exit-done': {
-      opacity: 0.3,
+      opacity: 0.1,
     },
   },
 });
