@@ -7,6 +7,8 @@ import HelloWorld from '../components/1-hello-world/HelloWorld';
 import HelloName from '../components/2-introducing-jsx/HelloName';
 import FormatName from '../components/2-introducing-jsx/FormatName';
 import Tick from '../components/3-rendering-elements/Tick';
+import Welcome from '../components/4-components-props/Welcome';
+import Comment from '../components/4-components-props/Comment/Comment';
 
 const routes = [
   { path: '/', Component: Home },
@@ -14,6 +16,8 @@ const routes = [
   { path: '/HelloName', Component: HelloName },
   { path: '/FormatName', Component: FormatName },
   { path: '/Tick', Component: Tick },
+  { path: '/Welcome', Component: Welcome },
+  { path: '/Comment', Component: Comment },
 ];
 
 const useStyles = makeStyles({
