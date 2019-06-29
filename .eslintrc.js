@@ -22,6 +22,7 @@ module.exports = {
   ],
   plugins: [
     'react',
+    'jsx-a11y',
     'react-hooks',
     '@typescript-eslint',
   ],
@@ -32,8 +33,15 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'linebreak-style': [
       'error',
-      'windows',
+      'windows'
     ],
-    '@typescript-eslint/indent': ['error', 2]
+    '@typescript-eslint/indent': ['error', 2],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
 };

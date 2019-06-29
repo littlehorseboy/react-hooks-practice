@@ -27,14 +27,14 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Router() {
+export default function Router(): JSX.Element {
   const classes = useStyles();
 
   return (
     <HashRouter>
-      {routes.map(({ path, Component }) => (
+      {routes.map(({ path, Component }): JSX.Element => (
         <Route key={path} exact path={path}>
-          {({ match }) => (
+          {({ match }): JSX.Element => (
             <CSSTransition
               in={match != null}
               timeout={300}
