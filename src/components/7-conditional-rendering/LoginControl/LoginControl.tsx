@@ -14,18 +14,19 @@ export default function LoginControl(): JSX.Element {
     setIsLoggedIn(false);
   };
 
-  let button;
-
-  if (isLoggedIn) {
-    button = <LogoutButton onClick={handleLogoutClick} />;
-  } else {
-    button = <LoginButton onClick={handleLoginClick} />;
-  }
-
   return (
     <div>
       <Greeting isLoggedIn={isLoggedIn} />
-      {button}
+
+      <div>
+        This user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.
+      </div>
+
+      {
+        isLoggedIn
+          ? <LogoutButton onClick={handleLogoutClick} />
+          : <LoginButton onClick={handleLoginClick} />
+      }
     </div>
   );
 }
