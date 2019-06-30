@@ -1,6 +1,6 @@
 import React from 'react';
 import { CSSTransition } from 'react-transition-group';
-import { HashRouter, Route } from 'react-router-dom';
+import { HashRouter, Route, Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Home from '../pages/Home/Home';
 import HelloWorld from '../components/1-hello-world/HelloWorld';
@@ -12,6 +12,7 @@ import Comment from '../components/4-components-props/Comment';
 import Clock from '../components/5-state-lifecycle/Clock';
 import Toggle from '../components/6-handling-events/Toggle';
 import Counter from '../components/6-handling-events/Counter';
+import Greeting from '../components/7-conditional-rendering/Greeting';
 
 const routes = [
   { path: '/', Component: Home },
@@ -24,6 +25,7 @@ const routes = [
   { path: '/Clock', Component: Clock },
   { path: '/Toggle', Component: Toggle },
   { path: '/Counter', Component: Counter },
+  { path: '/Greeting', Component: Greeting },
 ];
 
 const useStyles = makeStyles({
@@ -45,14 +47,28 @@ const useStyles = makeStyles({
   },
 });
 
+interface Match {
+  match: {
+    params: object;
+    isExact: boolean;
+    path: string;
+    url: string;
+  };
+}
+
 export default function Router(): JSX.Element {
   const classes = useStyles();
 
   return (
     <HashRouter>
+      {routes.map(({ path }): JSX.Element => (
+        <Link to={path} key={path}>
+          <button>{path}</button>
+        </Link>
+      ))}
       {routes.map(({ path, Component }): JSX.Element => (
         <Route key={path} exact path={path}>
-          {({ match }): JSX.Element => (
+          {({ match }: Match): JSX.Element => (
             <CSSTransition
               in={match != null}
               timeout={300}
@@ -60,7 +76,7 @@ export default function Router(): JSX.Element {
               unmountOnExit
             >
               <div className={classes.page}>
-                <Component />
+                <Component match={match} />
               </div>
             </CSSTransition>
           )}
