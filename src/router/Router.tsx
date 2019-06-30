@@ -12,7 +12,7 @@ import Comment from '../components/4-components-props/Comment';
 import Clock from '../components/5-state-lifecycle/Clock';
 import Toggle from '../components/6-handling-events/Toggle';
 import Counter from '../components/6-handling-events/Counter';
-import Greeting from '../components/7-conditional-rendering/Greeting';
+import Greeting from '../components/7-conditional-rendering/Greeting/Greeting';
 
 const routes = [
   { path: '/', Component: Home },
