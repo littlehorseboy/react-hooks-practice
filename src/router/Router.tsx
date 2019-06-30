@@ -11,6 +11,7 @@ import Welcome from '../components/4-components-props/Welcome';
 import Comment from '../components/4-components-props/Comment';
 import Clock from '../components/5-state-lifecycle/Clock';
 import Toggle from '../components/6-handling-events/Toggle';
+import Counter from '../components/6-handling-events/Counter';
 
 const routes = [
   { path: '/', Component: Home },
@@ -22,6 +23,7 @@ const routes = [
   { path: '/Comment', Component: Comment },
   { path: '/Clock', Component: Clock },
   { path: '/Toggle', Component: Toggle },
+  { path: '/Counter', Component: Counter },
 ];
 
 const useStyles = makeStyles({
