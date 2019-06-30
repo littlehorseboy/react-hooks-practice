@@ -8,7 +8,9 @@ import HelloName from '../components/2-introducing-jsx/HelloName';
 import FormatName from '../components/2-introducing-jsx/FormatName';
 import Tick from '../components/3-rendering-elements/Tick';
 import Welcome from '../components/4-components-props/Welcome';
-import Comment from '../components/4-components-props/Comment/Comment';
+import Comment from '../components/4-components-props/Comment';
+import Clock from '../components/5-state-lifecycle/Clock';
+import Toggle from '../components/6-handling-events/Toggle';
 
 const routes = [
   { path: '/', Component: Home },
@@ -18,6 +20,8 @@ const routes = [
   { path: '/Tick', Component: Tick },
   { path: '/Welcome', Component: Welcome },
   { path: '/Comment', Component: Comment },
+  { path: '/Clock', Component: Clock },
+  { path: '/Toggle', Component: Toggle },
 ];
 
 const useStyles = makeStyles({
