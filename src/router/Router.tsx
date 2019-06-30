@@ -13,6 +13,7 @@ import Clock from '../components/5-state-lifecycle/Clock';
 import Toggle from '../components/6-handling-events/Toggle';
 import Counter from '../components/6-handling-events/Counter';
 import Greeting from '../components/7-conditional-rendering/Greeting/Greeting';
+import LoginControl from '../components/7-conditional-rendering/LoginControl/LoginControl';
 
 const routes = [
   { path: '/', Component: Home },
@@ -26,6 +27,7 @@ const routes = [
   { path: '/Toggle', Component: Toggle },
   { path: '/Counter', Component: Counter },
   { path: '/Greeting', Component: Greeting },
+  { path: '/LoginControl', Component: LoginControl },
 ];
 
 const useStyles = makeStyles({

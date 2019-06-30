@@ -6,7 +6,7 @@ interface Props {
   isLoggedIn: boolean;
 }
 
-function Greeting(props: Props): JSX.Element {
+export function Greeting(props: Props): JSX.Element {
   if (props.isLoggedIn) {
     return (
       <UserGreeting />
