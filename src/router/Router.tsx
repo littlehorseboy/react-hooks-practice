@@ -17,6 +17,8 @@ import LoginControl from '../components/7-conditional-rendering/LoginControl/Log
 import Mailbox from '../components/7-conditional-rendering/Mailbox/Mailbox';
 import AnotherPage from '../components/7-conditional-rendering/AnotherPage/AnotherPage';
 import NumberList from '../components/8-list-and-keys/NumberList';
+import ListItem from '../components/8-list-and-keys/ListItem';
+import Blog from '../components/8-list-and-keys/Blog';
 
 const routes = [
   { path: '/', Component: Home },
@@ -34,6 +36,8 @@ const routes = [
   { path: '/Mailbox', Component: Mailbox },
   { path: '/AnotherPage', Component: AnotherPage },
   { path: '/NumberList', Component: NumberList },
+  { path: '/ListItem', Component: ListItem },
+  { path: '/Blog', Component: Blog },
 ];
 
 const useStyles = makeStyles({
