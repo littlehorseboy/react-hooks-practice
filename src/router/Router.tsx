@@ -20,6 +20,7 @@ import NumberList from '../components/8-list-and-keys/NumberList';
 import ListItem from '../components/8-list-and-keys/ListItem';
 import Blog from '../components/8-list-and-keys/Blog';
 import NameForm from '../components/9-form/NameForm';
+import App from '../components/useContext/App';
 
 const routes = [
   { path: '/', Component: Home },
@@ -40,6 +41,7 @@ const routes = [
   { path: '/ListItem', Component: ListItem },
   { path: '/Blog', Component: Blog },
   { path: '/NameForm', Component: NameForm },
+  { path: '/App', Component: App },
 ];
 
 const useStyles = makeStyles({
