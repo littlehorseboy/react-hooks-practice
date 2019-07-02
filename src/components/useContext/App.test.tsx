@@ -4,6 +4,8 @@ import { render, fireEvent, cleanup } from '@testing-library/react';
 import LoginForm from './LoginForm';
 import { AuthContext } from './App';
 
+// 參考來源: https://tonylin.idv.tw/dokuwiki/doku.php/web:reactjs:react_hook:usecontext
+
 let authState = false;
 
 function LoginFormComp(): JSX.Element {
@@ -41,7 +43,7 @@ describe('LoginForm', (): void => {
 
   const givenAuthSignInSuccessfully = (): void => {
     const authDoNothing = jest.fn();
-    authDoNothing.mockImplementation(() => {});
+    authDoNothing.mockImplementation((): void => {});
     // Auth.signIn = authDoNothing.bind(Auth);
   };
 
