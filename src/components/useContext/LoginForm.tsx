@@ -29,10 +29,10 @@ export default function LoginForm(): JSX.Element | null {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    try {
+    if (userName === 'asd' && password === 'asd') {
       setAuthState(true);
-    } catch (error) {
-      setFeedBack(error.message);
+    } else {
+      setFeedBack('feedback error');
     }
   };
 

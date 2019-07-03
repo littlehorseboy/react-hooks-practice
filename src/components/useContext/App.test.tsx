@@ -51,7 +51,7 @@ describe('LoginForm', (): void => {
     givenAuthSignInSuccessfully();
     const formComp = render(<LoginFormComp />);
 
-    inputLoginInfo(formComp, 'ADMIN', 'ADMIN');
+    inputLoginInfo(formComp, 'asd', 'asd');
     clickLoginBtn(formComp);
 
     expect(authState).toBeTruthy();
