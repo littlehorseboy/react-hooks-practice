@@ -19,8 +19,9 @@ import AnotherPage from '../components/7-conditional-rendering/AnotherPage/Anoth
 import NumberList from '../components/8-list-and-keys/NumberList';
 import ListItem from '../components/8-list-and-keys/ListItem';
 import Blog from '../components/8-list-and-keys/Blog';
-import NameForm from '../components/9-form/NameForm';
 import App from '../components/useContext/App';
+import NameForm from '../components/9-form/NameForm';
+import EssayForm from '../components/9-form/EssayForm';
 
 const routes = [
   { path: '/', Component: Home },
@@ -40,8 +41,9 @@ const routes = [
   { path: '/NumberList', Component: NumberList },
   { path: '/ListItem', Component: ListItem },
   { path: '/Blog', Component: Blog },
-  { path: '/NameForm', Component: NameForm },
   { path: '/App', Component: App },
+  { path: '/NameForm', Component: NameForm },
+  { path: '/EssayForm', Component: EssayForm },
 ];
 
 const useStyles = makeStyles({
