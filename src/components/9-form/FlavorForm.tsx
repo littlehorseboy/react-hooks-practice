@@ -17,7 +17,10 @@ export default function FlavorForm(): JSX.Element {
 
   const handleMultipleChange = (event: React.ChangeEvent<HTMLSelectElement>): void => {
     setMultipleState({
-      value: [...multipleState.value, event.target.value],
+      value: Array.prototype.map.call(
+        event.target.selectedOptions,
+        (option: HTMLSelectElement): string => option.value,
+      ),
     });
   };
 
