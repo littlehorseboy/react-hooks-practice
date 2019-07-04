@@ -24,6 +24,7 @@ import NameForm from '../components/9-form/NameForm';
 import EssayForm from '../components/9-form/EssayForm';
 import FlavorForm from '../components/9-form/FlavorForm';
 import Reservation from '../components/9-form/Reservation';
+import Calculator from '../components/10-lifting-state-up/Calculator';
 
 const routes = [
   { path: '/', Component: Home },
@@ -48,6 +49,7 @@ const routes = [
   { path: '/EssayForm', Component: EssayForm },
   { path: '/FlavorForm', Component: FlavorForm },
   { path: '/Reservation', Component: Reservation },
+  { path: '/Calculator', Component: Calculator },
 ];
 
 const useStyles = makeStyles({
