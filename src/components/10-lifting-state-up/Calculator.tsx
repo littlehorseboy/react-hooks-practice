@@ -1,28 +1,30 @@
 import React, { useState } from 'react';
-
-interface BoilingVerdictProps {
-  celsius: number;
-}
-
-function BoilingVerdict(props: BoilingVerdictProps): JSX.Element {
-  if (props.celsius >= 100) {
-    return <p>The water would boil</p>;
-  }
-  return <p>The water would not boil</p>;
-}
+import BoilingVerdict from './BoilingVerdict';
+import TemperatureInput from './TemperatureInput';
 
 export default function Calculator(): JSX.Element {
   const [temperature, setTemperature] = useState('');
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleCelsiusChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    setTemperature(event.target.value);
+  };
+
+  const handleFahrenheitChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setTemperature(event.target.value);
   };
 
   return (
-    <fieldset>
-      <legend>Enter temperature in Celsius</legend>
-      <input value={temperature} onChange={handleChange} />
-      <BoilingVerdict celsius={parseFloat(temperature)} />
-    </fieldset>
+    <>
+      <TemperatureInput
+        scale="c"
+        temperature={temperature}
+        onTemperatureChange={handleCelsiusChange}
+      />
+      <TemperatureInput
+        scale="f"
+        temperature={temperature}
+        onTemperatureChange={handleFahrenheitChange}
+      />
+    </>
   );
 }
