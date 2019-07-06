@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import BoilingVerdict from './BoilingVerdict';
 
 interface ScaleNamesI {
   [c: string]: string;
@@ -22,7 +21,6 @@ export default function TemperatureInput(props: TemperatureInputProps): JSX.Elem
     <fieldset>
       <legend>Enter temperature in {scaleNames[props.scale]}</legend>
       <input value={props.temperature} onChange={props.onTemperatureChange} />
-      <BoilingVerdict celsius={parseFloat(props.temperature)} />
     </fieldset>
   );
 }
