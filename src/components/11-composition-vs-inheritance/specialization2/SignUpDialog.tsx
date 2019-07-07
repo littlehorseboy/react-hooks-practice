@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Dialog from './Dialog';
-import { statement } from '@babel/template';
 
 export default function SignUpDialog(): JSX.Element {
   const [state, setState] = useState({
