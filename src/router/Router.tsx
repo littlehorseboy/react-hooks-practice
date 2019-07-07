@@ -27,6 +27,8 @@ import Reservation from '../components/9-form/Reservation';
 import Calculator from '../components/10-lifting-state-up/Calculator';
 import WelcomeDialog from '../components/11-composition-vs-inheritance/children/WelcomeDialog';
 import SplitPaneContainer from '../components/11-composition-vs-inheritance/slots/SplitPaneContainer';
+import WelcomeMessageDialog from '../components/11-composition-vs-inheritance/specialization/WelcomeMessageDialog';
+import SignUpDialog from '../components/11-composition-vs-inheritance/specialization2/SignUpDialog';
 
 const routes = [
   { path: '/', Component: Home },
@@ -54,6 +56,8 @@ const routes = [
   { path: '/Calculator', Component: Calculator },
   { path: '/WelcomeDialog', Component: WelcomeDialog },
   { path: '/SplitPaneContainer', Component: SplitPaneContainer },
+  { path: '/WelcomeMessageDialog', Component: WelcomeMessageDialog },
+  { path: '/SignUpDialog', Component: SignUpDialog },
 ];
 
 const useStyles = makeStyles({
