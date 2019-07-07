@@ -25,6 +25,8 @@ import EssayForm from '../components/9-form/EssayForm';
 import FlavorForm from '../components/9-form/FlavorForm';
 import Reservation from '../components/9-form/Reservation';
 import Calculator from '../components/10-lifting-state-up/Calculator';
+import WelcomeDialog from '../components/11-composition-vs-inheritance/children/WelcomeDialog';
+import SplitPaneContainer from '../components/11-composition-vs-inheritance/slots/SplitPaneContainer';
 
 const routes = [
   { path: '/', Component: Home },
@@ -50,6 +52,8 @@ const routes = [
   { path: '/FlavorForm', Component: FlavorForm },
   { path: '/Reservation', Component: Reservation },
   { path: '/Calculator', Component: Calculator },
+  { path: '/WelcomeDialog', Component: WelcomeDialog },
+  { path: '/SplitPaneContainer', Component: SplitPaneContainer },
 ];
 
 const useStyles = makeStyles({
