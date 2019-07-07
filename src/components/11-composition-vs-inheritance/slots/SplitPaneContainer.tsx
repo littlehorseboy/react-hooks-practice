@@ -8,7 +8,7 @@ export default function SplitPaneContainer(): JSX.Element {
         <div>Top</div>
       }
       bottomPane={
-        <div>Top</div>
+        <div>Bottom</div>
       }
     ></SplitPane>
   );
