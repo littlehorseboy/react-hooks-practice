@@ -5,7 +5,6 @@ export default function Reservation(): JSX.Element {
   const [numberOfGuests, setNumberOfGuests] = useState(2);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
     if (event.target.type === 'checkbox') {
       setIsGoing(event.target.checked);
     } else {

@@ -14,11 +14,11 @@ export default function Counter(): JSX.Element {
     setSecondCount(secondCount + n);
   };
 
-  const handleThirdCountClick = (n: number, e: React.MouseEvent): void => {
+  const handleThirdCountClick = (n: number): void => {
     setThirdCount(thirdCount + n);
   };
 
-  const handleFourthCountClick = useCallback((n: number, e: React.MouseEvent): void => {
+  const handleFourthCountClick = useCallback((n: number): void => {
     setFourthCount(fourthCount + n);
   }, [fourthCount]);
 
