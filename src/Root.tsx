@@ -4,8 +4,6 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import Router from './router/Router';
 
-/* eslint class-methods-use-this: ["error", { "exceptMethods": ["render"] }] */
-
 export default function Root(): JSX.Element {
   return (
     <>
